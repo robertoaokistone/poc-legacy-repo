@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync:
-    uses: robertoaokistone/poc-legacy-relay-repo/.github/workflows/sync-legacy-to-new.yml@copilot/sync-legacy-repo-to-new-repo
+    uses: robertoaokistone/poc-legacy-relay-repo/.github/workflows/sync-legacy-to-new.yml@main
     with:
       new_repo: 'robertoaokistone/poc-new-repo'
       exclude_paths: |
