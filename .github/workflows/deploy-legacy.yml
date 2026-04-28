@@ -1,0 +1,16 @@
+name: Deploy Legado (k8s)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy via kubectl
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply manifests k8s
+        run: |
+          echo "Aplicando manifests de .k8s/"
+          kubectl apply -f .k8s/

@@ -1,0 +1,5 @@
+# Owners padrão para todos os arquivos
+* @robertoaokistone
+
+# Infraestrutura k8s — exclusivo do legado
+/.k8s/ @robertoaokistone

@@ -1,0 +1,17 @@
+name: Sync para Repo Novo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  sync:
+    uses: robertoaokistone/poc-legacy-relay-repo/.github/workflows/sync-legacy-to-new.yml@copilot/sync-legacy-repo-to-new-repo
+    with:
+      new_repo: 'robertoaokistone/poc-new-repo'
+      exclude_paths: |
+        .k8s/
+        .github/workflows/deploy-legacy.yml
+        .github/workflows/sync-to-new.yml
+    secrets:
+      new_repo_token: ${{ secrets.NEW_REPO_TOKEN }}

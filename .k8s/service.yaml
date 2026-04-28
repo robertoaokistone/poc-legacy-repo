@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poc-legacy-app
+spec:
+  selector:
+    app: poc-legacy-app
+  ports:
+    - port: 80
+      targetPort: 8080
